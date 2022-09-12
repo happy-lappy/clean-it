@@ -51,10 +51,7 @@ sudo -EH apt-fast -qq -y purge \
   temurin-17-jdk temurin-11-jdk powershell \
   linux-modules-5.15.0-1017-azure linux-azure-5.15-headers-5.15.0-1017 \
   gcc-10 gcc-9 g++-10 g++-9 cpp-9 cpp-10 linux-headers-5.15.0-1017-azure \
-  shellcheck locales iso-codes linux-azure-5.15-tools-5.15.0-1017 p7zip-full \
-  gcov-10 gcov-9 gcov-dump-10 gcov-dump-9 gcov-tool-10 gcov-tool-9 gcc-ar-10 gcc-ar-9 \
-  gcc-nm-10 gcc-nm-9 gcc-ranlib-10 gcc-ranlib-9 
-  &>/dev/null
+  shellcheck locales iso-codes linux-azure-5.15-tools-5.15.0-1017 p7zip-full &>/dev/null
 sudo -EH apt-fast -qq -y autoremove &>/dev/null
 echo "::endgroup::"
 
