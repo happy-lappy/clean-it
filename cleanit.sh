@@ -48,28 +48,14 @@ sudo -EH apt-fast -qq -y purge \
   mono-* mono* libmono-* \
   nuget packages-microsoft-prod snapd yarn \
   php-* php5* php7* php8* snmp \
+  temurin-17-jdk temurin-11-jdk powershell \
+  linux-modules-5.15.0-1017-azure linux-azure-5.15-headers-5.15.0-1017 \
+  gcc-10 gcc-9 g++-10 g++-9 cpp-9 cpp-10 linux-headers-5.15.0-1017-azure \
+  shellcheck locales iso-codes linux-azure-5.15-tools-5.15.0-1017 p7zip-full \
+  gcov-10 gcov-9 gcov-dump-10 gcov-dump-9 gcov-tool-10 gcov-tool-9 gcc-ar-10 gcc-ar-9 \
+  gcc-nm-10 gcc-nm-9 gcc-ranlib-10 gcc-ranlib-9 
   &>/dev/null
 sudo -EH apt-fast -qq -y autoremove &>/dev/null
-{
-  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100
-  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90
-  sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 100
-  sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 90
-  sudo update-alternatives --install /usr/bin/cpp cpp /usr/bin/cpp-10 100
-  sudo update-alternatives --install /usr/bin/cpp cpp /usr/bin/cpp-9 90
-  sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-10 100
-  sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-9 90
-  sudo update-alternatives --install /usr/bin/gcov-dump gcov-dump /usr/bin/gcov-dump-10 100
-  sudo update-alternatives --install /usr/bin/gcov-dump gcov-dump /usr/bin/gcov-dump-9 90
-  sudo update-alternatives --install /usr/bin/gcov-tool gcov-tool /usr/bin/gcov-tool-10 100
-  sudo update-alternatives --install /usr/bin/gcov-tool gcov-tool /usr/bin/gcov-tool-9 90
-  sudo update-alternatives --install /usr/bin/gcc-ar gcc-ar /usr/bin/gcc-ar-10 100
-  sudo update-alternatives --install /usr/bin/gcc-ar gcc-ar /usr/bin/gcc-ar-9 90
-  sudo update-alternatives --install /usr/bin/gcc-nm gcc-nm /usr/bin/gcc-nm-10 100
-  sudo update-alternatives --install /usr/bin/gcc-nm gcc-nm /usr/bin/gcc-nm-9 90
-  sudo update-alternatives --install /usr/bin/gcc-ranlib gcc-ranlib /usr/bin/gcc-ranlib-10 100
-  sudo update-alternatives --install /usr/bin/gcc-ranlib gcc-ranlib /usr/bin/gcc-ranlib-9 90
-} &>/dev/null
 echo "::endgroup::"
 
 {
